@@ -140,10 +140,14 @@ STATICFILES_DIRS=[
 ]
 
 STATIC_URL = '/static/'
-MEDIA_URL='/media'
+MEDIA_URL='/media/'
 
 # this two lines used when you want put static files and media files on a cdn server like AWS , ...
 STATIC_ROOT=os.path.join(BASE_DIR,'static_cdn')
 MEDIA_ROOT=os.path.join(BASE_DIR,'media_cdn')
 
+TEMP=os.path.join(BASE_DIR,'media_cdn/temp')
+
+# in local use
+BASE_DIR="http://127.0.0.1:8000"
 

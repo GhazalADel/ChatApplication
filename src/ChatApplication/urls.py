@@ -16,8 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from homepage.views import home_page_view
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home_page_view,name="home")
 ]
+
+#settings.DEBUG==True if we are in developement state
+#settings.DEBUG==False if we are in production state
+if settings.DEBUG:
+    # goal:tell django where is static files
+    urlpatterns+=static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+    urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+    
+
