@@ -1,5 +1,80 @@
-{% extends 'base.html' %}
-
-{% block content %}
-
-{% endblock content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/fbc0082036.js" crossorigin="anonymous"></script>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '../../../../../static/CSS/homeStyle.css' %}"/>
+	<title>Home</title>
+</head>
+<body>
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx far fa-comment-alt'></i>
+			<span class="text brandName">Chat !</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx far fa-comment'></i>
+					<span class="text">Private Chats</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx far fa-comments'></i>
+					<span class="text">Groups</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx far fa-address-book'></i>
+					<span class="text">Contacts</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx far fa-user-circle'></i>
+					<span class="text">Account</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout">
+					<i class="bx fa fa-sign-out"></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+		<div class="side-menu">
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+		</div>
+	</section>
+	
+	<section id="content">
+		<nav>
+			<i class="fa fa-bars bx bx-menu"></i>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<a href="#" class="notification">
+				<i class='bx far fa-bell'></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="{% static '../../../../../static/defaultPro.png' %}">
+			</a>
+		</nav>
+	</section>
+	<script src="{% static '../../../../../static/JS/homeJS.js' %}"></script>
+</body>
+</html>
