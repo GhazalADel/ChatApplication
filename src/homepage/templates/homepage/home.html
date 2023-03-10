@@ -71,7 +71,7 @@
 				<span class="num">8</span>
 			</a>
 			<a href="#" class="profile">
-				<img src="{% static '../../../../../static/defaultPro.png' %}">
+				<img src="{{request.user.profile_image.url}}">
 			</a>
 		</nav>
 	</section>
