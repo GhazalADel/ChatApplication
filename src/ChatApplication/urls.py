@@ -18,10 +18,12 @@ from django.urls import path
 from homepage.views import home_page_view
 from django.conf.urls.static import static
 from django.conf import settings
+from account.views import register_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home_page_view,name="home")
+    path('',home_page_view,name="home"),
+    path('register/',register_view,name="register")
 ]
 
 #settings.DEBUG==True if we are in developement state
