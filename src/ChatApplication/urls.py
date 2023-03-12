@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
 from homepage.views import home_page_view
 from django.conf.urls.static import static
 from django.conf import settings
@@ -25,11 +26,13 @@ urlpatterns = [
     path('',home_page_view,name="home"),
     path('register/',register_view,name="register"),
     path('login/',login_view,name="login"),
+    path('account/',include('account.urls',namespace='account')),
     path('logout/',logout_view,name="logout"),
 ]
 
 #settings.DEBUG==True if we are in developement state
 #settings.DEBUG==False if we are in production state
+
 if settings.DEBUG:
     # goal:tell django where is static files
     urlpatterns+=static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

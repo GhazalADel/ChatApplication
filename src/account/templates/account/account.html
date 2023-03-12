@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/fbc0082036.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&family=Niconne&family=Oleo+Script&family=Playfair+Display:ital,wght@0,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+	    <script src="https://kit.fontawesome.com/fbc0082036.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&family=Faustina:ital@1&family=Niconne&family=Oleo+Script&family=Pathway+Gothic+One&family=Playfair+Display:ital,wght@0,600;1,700&display=swap" rel="stylesheet">
+        <title>Account</title>
+    </head>
+<body>
+    <style>
+        :root {
+            --purple:#b921d8;
+            --light:#E8E8E8;
+            --dark:#D3D3D3;
+
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            background-image: url("{% static '../../../../../static/accountBack.jpg");
+           
+            
+        }
+        .card{ 
+            margin: 0;
+            position: absolute;
+            top: 15%;
+            transform: translateY(-50%);
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            height: 70vh;
+            width: 45vw;
+            background-color:var(--light); 
+            top:50%;
+            
+        }
+        .image-container{
+            max-width: 250px;
+            height: auto;
+            margin-left: 0px;
+            margin-top:0px;
+            position: absolute;
+            
+        }
+        #id_profile_image{
+            
+            width: 300px;
+            height: 300px;
+            border-top-left-radius: 15px;
+            border-bottom-right-radius:15px;
+        }
+        .phone_text {
+            font-size: 30px;
+            margin-left: 340px;
+            margin-top: 80px;
+            font-family: 'Playfair Display', serif;
+            color:#c51a80;
+            font-weight: 600;
+        }
+        .username_text{
+            font-size: 30px;
+            margin-left: 340px;
+            margin-top: 70px;
+            font-family: 'Playfair Display', serif;
+            color:#c51a80;
+            font-weight: 600;
+        }
+        .show_username{
+            font-size: 30px;
+            margin-left: 350px;
+            margin-top: 20px;
+            font-family: 'Faustina', serif;
+            color:#b921d8;
+            font-weight: 200;
+        }
+        .show_phone{
+            font-size: 30px;
+            margin-left: 340px;
+            margin-top: 30px;
+            font-family: 'Faustina', serif;
+            color:#b921d8;
+            font-weight: 200;
+        }
+        .paperclip {
+            box-sizing: border-box;
+            display: block;
+            top: 22%; 
+            left: 29%;
+            margin-top: -40px;
+            margin-left: -19px;
+            height: 80px;
+            width: 38px;
+            border: 3px groove #c51a80;
+            border-radius: 0 0 90px 90px;
+            border-top: none;
+            position: absolute;
+            transform: rotate(7deg);
+            -webkit-transform: rotate(29deg);
+            -webkit-backface-visibility: hidden;
+        }
+        .paperclip::before, .paperclip::after {
+            content:'';
+            position: absolute;
+            border: 3px groove #c51a80;
+        }
+        .paperclip::before {
+            left: 3px;
+            height: 50px;
+            width: 20px;
+            border-radius: 0 0 90px 90px;
+            border-top: none;
+        }
+        .paperclip::after {
+            top: -30px;
+            left: -3px;
+            height: 30px;
+            width: 26px;
+            border-radius: 90px 90px 0 0;
+            border-bottom: none;
+        }
+        .btn{
+            display: block;
+            width: 135px;
+            height: 50px;
+            background: #b921d8;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            line-height: 25px;
+            margin-left:345px;
+            margin-top: 50px;
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            background-image: radial-gradient(100% 100% at 100% 0, #c51a80 0, #d464e8 100%);
+        }
+        .btn:focus {
+            box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #b921d8 0 -3px 0 inset;
+        }
+
+        .btn:hover {
+            box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #b921d8 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            box-shadow: #3c4fe0 0 3px 7px inset;
+            transform: translateY(2px);
+        }
+        .ic{
+            display: block;
+            margin-top: 8px;
+            margin-left: 620px;
+            
+        }
+        .a_icon{
+            text-decoration: none;
+        }
+    </style>
+
+     <div class="container">
+        <div class="card">
+            <div class="image-container">
+                <img src="{{profile_image}}" id="id_profile_image" alt="profile">
+            </div>
+            <p class="phone_text">Phone</p>
+            {%  if is_self %}
+                <h5 class="show_phone">{{phone}}</h5>
+            {% else %}
+                {% if hide_phone %}
+                    <h5>**********</h5>
+                {% else %}
+                    <h5>{{phone}}</h5>
+                {% endif %}
+            {% endif %}
+            <p class="username_text">Username</p>
+                <h6 class="show_username">{{username}}</h6>
+                {% if is_self %}
+                      <a  class="btn" href="#">Edit Profile</a>
+                {% else %}
+                      <a  class="btn" href="#">Send Message</a> 
+                {% endif %}
+            <a class="a_icon" href="{% url 'home' %}"><i class="fa fa-home ic" style="font-size:48px;color:#d464e8"></i></a>
+        </div>
+
+    </div>
+    <div class="paperclip"></div>
+   
+    <script type="text/javascript">
+        
+    </script>  
+</body>
+</html>
