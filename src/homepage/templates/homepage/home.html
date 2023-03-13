@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,10 +63,13 @@
 			<i class="fa fa-bars bx bx-menu"></i>
 			<form action="#">
 				<div class="form-input">
-					<input type="search" placeholder="Search...">
-					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+					<input type="search" placeholder="Search Groups or Users ...">
 				</div>
 			</form>
+            <a href="#" id="new-group">
+                <i id="new-group-icon"class='bx far fa-plus'></i>
+                <span id="new-group-text">New Group</span>
+            </a>
 			<a href="#" class="notification">
 				<i class='bx far fa-bell'></i>
 				<span class="num">8</span>
@@ -74,6 +78,16 @@
 				<img src="{{request.user.profile_image.url}}">
 			</a>
 		</nav>
+        <main style="display: flex;flex-direction: row;">
+            <div id="show">
+                <ul>
+                </ul>
+            </div>
+            <div id="chat">
+
+            </div>
+		
+		</main>
 	</section>
 	<script src="{% static '../../../../../static/JS/homeJS.js' %}"></script>
 </body>
